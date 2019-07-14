@@ -41,7 +41,8 @@
             {{#each burgers_data}}
             {{#if devoured}}
             <div>
-                <p>{{this.burger_name}}</p>
+                <button class="devour-burger" data-id="{{this.burger_name}}">{{this.burger_name}}</button>
+                {{!-- <p>{{this.burger_name}}</p> --}}
             </div>
             {{/if}}
             {{/each}}
