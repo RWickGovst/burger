@@ -2,9 +2,9 @@
 $(function() {
     $(".change-status").on("click", function(event) {
       var id = $(this).data("id");
-      console.log("Devoured:" + id);
+    //   console.log("Devoured:" + id);
       var newStatus = $(this).data;
-      console.log("new status: " +newStatus);
+    //   console.log("new status: " +newStatus);
       
       var newDevouredStatus = {
           devoured: 1
@@ -16,7 +16,7 @@ $(function() {
         data: newDevouredStatus
       }).then(
         function() {
-          console.log("changed status to", newStatus);
+        //   console.log("changed status to", newStatus);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -37,7 +37,7 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          console.log("created new burger");
+        //   console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
         }
@@ -52,7 +52,7 @@ $(function() {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted burger", id);
+            // console.log("deleted burger", id);
           // Reload the page to get the updated list
           location.reload();
         }

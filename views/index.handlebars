@@ -20,14 +20,15 @@
             {{#each burgers_data}}
             {{#unless devoured}}
             <div>
-                <p>{{this.burger_name}}</p>
-            </div>
-            <div>
-                <button class="change-status" data-id="{{id}}" data-newdevoured="{{devoured}}">
-                    Devoured!
+                <p>{{this.burger_name}}
+            {{!-- </div> --}}
+            {{!-- <div> --}}
+                <button class="change-status" data-id="{{id}}" data-new="{{devoured}}">
+                    Try!
                 </button>
 
                 <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+            </p>
             </div>
             {{/unless}}
             {{/each}}

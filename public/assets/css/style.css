@@ -20,4 +20,6 @@ li {
   .form-group {
     margin-bottom: 5px;
   }
-  
+  button {
+    background-color: lightgray;
+  }
