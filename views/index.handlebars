@@ -1,19 +1,34 @@
 {{!-- set up template that Handlebars can render onto --}}
 {{!-- create a button to submit user input into database --}}
-
-<h3>Burgers!</h3>
-
-<img src="https://nypdecider.files.wordpress.com/2014/10/bobs-burgers.png?w=1156&h=771&crop=1" alt="Burger"
-    style="width:50%;height:auto;">
+<div class="w3-row">
+    <h3>Burgers!</h3>
+    <div class="w3-half w3-container">
+        <img src="https://nypdecider.files.wordpress.com/2014/10/bobs-burgers.png?w=1156&h=771&crop=1" alt="Burger"
+            style="width:100%;height:auto;">
+    </div>
+    <div class="w3-half w3-container">
+        <img src="https://thenypost.files.wordpress.com/2015/01/tv_burgers_family1a.jpg?quality=90&strip=all&w=1236&h=820&crop=1"
+            alt="Burger" style="width:100%;height:auto;">
+    </div>
+</div>
 
 <div class="w3-row">
     <h4>Burgers on our menu:</h4>
 
     <div class="w3-third w3-container w3-green">
         <ul>
-            {{#each burgers}}
+            {{#each burgers_data}}
             {{#unless devoured}}
-            {{> burgers/burger-block devoured=true}}
+            <div>
+                <p>{{this.burger_name}}</p>
+            </div>
+            <div>
+                <button class="change-status" data-id="{{id}}" data-newdevoured="{{devoured}}">
+                    Devoured!
+                </button>
+
+                <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+            </div>
             {{/unless}}
             {{/each}}
         </ul>
@@ -22,9 +37,11 @@
     <div class="w3-third w3-container w3-blue">
         <h4>Devoured!</h4>
         <ul>
-            {{#each burgers}}
+            {{#each burgers_data}}
             {{#if devoured}}
-            {{> burgers/burger-block devoured=false}}
+            <div>
+                <p>{{this.burger_name}}</p>
+            </div>
             {{/if}}
             {{/each}}
         </ul>

@@ -50,6 +50,7 @@ var orm = {
       if (err) {
         throw err;
       }
+      console.log("result in orm: " +JSON.stringify(result));
       cb(result);
     });
   },

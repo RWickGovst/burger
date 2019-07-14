@@ -2,11 +2,13 @@
 $(function() {
     $(".change-status").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newburger");
-  
-      var newStatus = {
-        devoured: newStatus
-      };
+      console.log("Devoured:" + id);
+      var newStatus = $(this).data;
+      console.log("new status: " +newStatus);
+      
+      var newDevouredStatus = {
+          devoured: 1
+      }
   
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
@@ -26,8 +28,7 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        name: $("#ca").val().trim(),
-        devoured: $("[name=devoured]:checked").val().trim()
+        name: $("#burger").val().trim()
       };
   
       // Send the POST request.
@@ -57,5 +58,6 @@ $(function() {
         }
       );
     });
+
   });
   
