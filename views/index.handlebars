@@ -1,6 +1,6 @@
 {{!-- set up template that Handlebars can render onto --}}
 {{!-- create a button to submit user input into database --}}
-<div class="w3-row">
+<div class="w3-row" id="images">
     <h3>Burgers!</h3>
     <div class="w3-half w3-container">
         <img src="https://nypdecider.files.wordpress.com/2014/10/bobs-burgers.png?w=1156&h=771&crop=1" alt="Burger"
@@ -13,9 +13,10 @@
 </div>
 
 <div class="w3-row">
-    <h4>Burgers on our menu:</h4>
+    
 
     <div class="w3-third w3-container w3-green">
+        <h4>Burgers on our menu:</h4>
         <ul>
             {{#each burgers_data}}
             {{#unless devoured}}

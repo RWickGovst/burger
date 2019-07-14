@@ -1,3 +1,7 @@
+#images {
+    padding: 5px;
+}
+
 body {
 background-color: coral;
     }
@@ -21,7 +25,7 @@ li {
   .form-group {
     margin-bottom: 5px;
   }
-  
+
   button {
     background-color: lightgray;
   }
