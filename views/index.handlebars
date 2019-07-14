@@ -1,14 +1,15 @@
 {{!-- set up template that Handlebars can render onto --}}
 {{!-- create a button to submit user input into database --}}
 
-<img src="https://nypdecider.files.wordpress.com/2014/10/bobs-burgers.png?w=1156&h=771&crop=1" alt="Burger" style="width:50%;height:auto;">
+<h3>Burgers!</h3>
 
-<h1>Burgers!</h1>
+<img src="https://nypdecider.files.wordpress.com/2014/10/bobs-burgers.png?w=1156&h=771&crop=1" alt="Burger"
+    style="width:50%;height:auto;">
 
 <div class="w3-row">
-    <h2>Burgers on our menu:</h2>
+    <h4>Burgers on our menu:</h4>
 
-    <div class="w3-half w3-container w3-green">
+    <div class="w3-third w3-container w3-green">
         <ul>
             {{#each burgers}}
             {{#unless devoured}}
@@ -18,26 +19,27 @@
         </ul>
     </div>
 
-    <h2>Devoured!</h2>
-    <div class="w3-half w3-container w3-green"></div>
-
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block devoured=false}}
-        {{/if}}
-        {{/each}}
-    </ul>
-</div>
-</div>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burger">Burger Name:</label>
-        <input type="text" id="burger" name="name">
+    <div class="w3-third w3-container w3-blue">
+        <h4>Devoured!</h4>
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burgers/burger-block devoured=false}}
+            {{/if}}
+            {{/each}}
+        </ul>
     </div>
 
-    <button type="submit">Add Burger</button>
-</form>
+    <div class="w3-third w3-container w3-green">
+        <h4>Add a Burger</h4>
+        <form class="create-form">
+
+            <div class="form-group">
+                <label for="burger">Burger Name:</label>
+                <input type="text" id="burger" name="name">
+            </div>
+
+            <button type="submit">Add Burger</button>
+        </form>
+    </div>
+</div>
