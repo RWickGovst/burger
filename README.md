@@ -11,5 +11,5 @@
 #### Screenshot
 ![Home Page](./bobsBurgers.png)
 
-### Herokku App Link
+### Heroku App Link
 https://greve-choucroute-33164.herokuapp.com
