@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/RWickGovst/burger/issues"
   },
-  "homepage": "https://github.com/RWickGovst/burger#readme",
   "keywords": [],
   "dependencies": {
     "express": "^4.17.1",
